@@ -129,7 +129,6 @@ function artcLast(v) {
   htmlColSiz.appendChild(siz);
   btn.appendChild(btnNode);
   htmlColSiz.appendChild(color);
-  editMenu(v);
   htmlBtn.appendChild(btn);
 }
 function range(k) {
@@ -153,24 +152,7 @@ function range(k) {
   artcImgI.setAttribute("src", articles[k].image);
   artcImg.appendChild(artcImgI);
 }
-function editMenu(v) {
-  htmlBtn = document.getElementsByClassName("artc-btn")[v];
-  var editBtn = document.createElement("img");
-  editBtn.setAttribute("src", "icons/three dots.svg");
-  editBtn.setAttribute("class", "three-dots-icon");
-  var editMenuDiv = document.createElement("div");
-  var menuEditBtn = document.createElement("div");
-  var menuDeleteBtn = document.createElement("div");
-  var menuEditBtnNode = document.createTextNode("Edit");
-  var menuDeleteBtnNode = document.createTextNode("Delete");
-  menuEditBtn.appendChild(menuEditBtnNode);
-  menuDeleteBtn.appendChild(menuDeleteBtnNode);
-  editMenuDiv.appendChild(menuEditBtn);
-  editMenuDiv.appendChild(menuDeleteBtn);
-  editMenuDiv.setAttribute("class", "edit-menu");
-  htmlBtn.appendChild(editMenuDiv);
-  htmlBtn.appendChild(editBtn);
-}
+
 for (k = 0; k < articles.length; k++) {
   jeantArt();
   artcTxt(k);
