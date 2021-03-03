@@ -1,29 +1,351 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
-    background: #eeeded;
+  font-family: 'graphik regular',Arial, Helvetica, sans-serif;
+  background-color: #E6E6E6;
+}
+/* nav-bar */
+a {
+  text-decoration: none;
+}
+nav {
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+#nav-div{
+  width: 80%;
+  margin: 0 10%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.menu a {
+  color: black;
+  padding: 8px;
+  border-style: none none solid none;
+  border-width: 1px;
+}
+.menu a:hover {
+  border-style: solid;
+  border-radius: 5px;
+}
+#search-bar input {
+  width: 200px;
+  height: 25px;
+  background-color:#E6E6E6 ;
+  border-style: none none solid none;
+  border-width: 1px;
+}
+#search-bar button {
+  height: 25px;
+  background-color: #E6E6E6;
+  border-style: none none solid none;
+  border-width: 1px;
+}
+.menu-btn img{
+  width: 20px;
+  height: 30px;
+}
+.menu-btn {
+  display: none;
+}
+@media (max-width:768px) {
+  body{
+      overflow-x: hidden ;
   }
-  
-  .card {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.2s ease-in-out;
-    box-sizing: border-box;
-    margin-top:10px;
-    margin-bottom:10px;
-    background-color:#FFF;
+  .menu  {
+      position: absolute;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 600px;
+      width: 50%;
+      top:80px;
+      right: 0;
+      background-color:#E6E6E6 ;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  } 
+  .menu-btn{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
   }
-  
-  .card:hover {
-    box-shadow: 0 5px 5px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  .menu-active {
+      transform: translateX(0%);
   }
-  .card > .card-inner {
-    padding:10px;
+  #logo{
+      font-size: 13px;
   }
-  .card .header h2, h3 {
-    margin-bottom: 0px;
-    margin-top:0px;
+  #search-bar input  {
+      width: 120px;
   }
-  .card .header {
-    margin-bottom:5px;
+  #search-bar button {
+      width: 40px;
+      font-size: 10px;
   }
-  .card img{
-    width:100%;
+}
+/* part-1*/
+
+#part-1{
+  width: 80%;
+  height: 600px;
+  margin: 20px 10%;
+  display: grid;
+  grid-template-columns: 35% 30% auto;
+}
+.part1_img {
+  background-size: cover;
+  color: black;
+}
+.txt{
+  width: 80%;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  padding: 10%;
+  opacity: 0;
+}
+.img-hover{
+  opacity: 0.7;
+}
+#third-div {
+  display: flex;
+  flex-direction: column;
+}
+.img1 {
+  background-image: url("images1/Handmade Sunglasses & Eyeglasses Collections - MYKITA®.jpg");
+}
+.img2 {
+  background-image: url("images1/Couple Photography в 2020 г _ Парные портреты, Фотография пары, Фотосъемка.jpg");
+}
+.img3 {
+  background-image: url("images1/joel-muniz-zqgJbYEQRJA-unsplash.jpg");
+  height: 50%;
+}
+.img4 {
+  background-image: url("images1/eliott-reyna-jCEpN62oWL4-unsplash.jpg");
+  height: 50%;
+}
+@media (max-width:768px){
+  #part-1{
+      display: grid;
+      grid-template-rows: 40% auto auto;
+      grid-template-columns: 50% 50%;
   }
+  #third-div{
+      grid-column: 1/3;
+      grid-row: 2/4;
+  }
+  .txt{
+      font-size: 20px;
+  }
+}
+
+/* part-2*/
+
+#part-2{
+  width: 80%;
+  margin: 20px 10%;
+}
+#prod {
+  width: 100%;
+  height: 50%;
+}
+#prod-div {
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.txt-h{
+  padding: 10px 0;
+  border-style: none none solid none;
+  border-width: 1px;
+}
+.artc{
+  width: 250px;
+  height: 500px;
+  background-color: white;
+  margin: 20px 0;
+}
+.artc-img {
+  height: 65%;
+  width: 100%;
+  background-size: cover;
+}
+.artc-txt {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.artc-txt div {
+  margin: 5px 0;
+} 
+.col-siz {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.artc-btn{
+  display: flex;
+  flex-direction: row;
+}
+.artc-btn button {
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  color: white;
+  background-color: black;
+}
+.three-dots-icon{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.edit-menu {
+  width: 80px;
+  height: 80px;
+  background-color: #E6E6E6 ;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.edit-menu div{
+  border-bottom-style:solid ;
+  border-color: black;
+  border-width: 1px;
+}
+.edit-active {
+  display: block;
+}
+.add-btn {
+  width: 250px;
+  height: 500px;
+  background-color: white;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background-color: black;
+  color: white;
+}
+.img-part2 {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width:768px){
+  .artc {
+      width: 100%;
+  }
+}
+
+/* part-3*/
+
+#part-3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 10%;
+  background-color: white;
+  height: 120px;
+  border-radius: 5px;
+}
+.sub {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.sub input {
+  width: 80%;
+  height: 30px;
+  border-radius: 3px;
+}
+.sub button {
+  width: 20%;
+  height: 35px;
+  color: white;
+  background-color: black;
+  border-radius: 3px;
+  border-color: black;
+  font-size: 20px;
+}
+@media (max-width:768px){
+  .sub-txt {
+      font-size: 10px;
+  }
+  .sub {
+          width: 100%;
+      }
+  #part-3 div {
+      margin: 5px;
+  }
+  .sub button {
+      font-size: 15px;
+  }
+}
+
+/* part-4*/
+
+#part-4 {
+  background-color: black;
+  width: 100%;
+  height: 350px;
+  margin-top: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+#part-4 div {
+  width: 80%;
+  margin: 0 10%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+#part-4 ul {
+  list-style: none;
+}
+#part-4 ul li {
+  margin: 30px 0;
+}
+@media (max-width:768px){
+  #part-4{
+      height: 100%;
+  }
+  #part-4 div {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto;
+  }
+  #part-4 ul li {
+      margin: 15px 0;
+  }
+}
