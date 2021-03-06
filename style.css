@@ -39,14 +39,14 @@ nav h1{
   margin: 5% 5% 5% 5%;
 }
 
-#id{
+#id_card{
   display: flex;
   justify-content: center;
   font-size: 12px;
   font-weight: 600;
 }
 
-#img{
+#img_card{
   display: flex;
   justify-content: center;
   font-size: 12px;
@@ -55,7 +55,7 @@ nav h1{
   height: 350px;
 }
 
-#nom{
+#nom_card{
   display: flex;
   justify-content: center;
   font-size: 18px;
@@ -63,7 +63,7 @@ nav h1{
   color: rgb(53, 47, 82);
 }
 
-#category{
+#category_card{
   display: flex;
   justify-content: center;
   font-size: 12px;
@@ -71,7 +71,7 @@ nav h1{
   color: white;
 }
 
-#color{
+#color_card{
   display: flex;
   justify-content: center ;
   font-size: 18px;
@@ -79,15 +79,14 @@ nav h1{
   color:  rgb(53, 47, 82);
 }
 
-#size{
+#size_card{
   display: flex;
   justify-content: center;
   font-size: 18px;
   font-weight: 600;
-  rgb(53, 47, 82);
 }
 
-#price{
+#price_card{
   display: flex;
   justify-content: flex-end;
   font-size: 25px;
@@ -100,10 +99,10 @@ nav h1{
   font-weight: 700;
   color: white;
   text-align: center;
-  background-color: #4CAF50;;
+  background-color: black;
   box-shadow: 20px;
   border-radius: 8px;
-  width: 12%;
+  width: 20%;
   margin: 0 0 0 5%;
 }
 
@@ -112,9 +111,9 @@ nav h1{
   font-size: 20px;
   font-weight: 700;
   color: white;
-  background-color: #008CBA;
+  background-color: black;
   border-radius: 8px;
-  width: 17%;
+  width: 25%;
   margin: 0 0 0 5%;
 }
 
