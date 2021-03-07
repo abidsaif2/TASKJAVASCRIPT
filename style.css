@@ -26,7 +26,7 @@ nav h1{
   grid-template-columns: 2fr 2fr 2fr;
 }
 
-#card{
+.card{
   display: flex;
   justify-content: flex-start  ;
   align-self: center;
@@ -39,14 +39,14 @@ nav h1{
   margin: 5% 5% 5% 5%;
 }
 
-#id_card{
+.id_card{
   display: flex;
   justify-content: center;
   font-size: 12px;
   font-weight: 600;
 }
 
-#img_card{
+.img_card{
   display: flex;
   justify-content: center;
   font-size: 12px;
@@ -55,7 +55,7 @@ nav h1{
   height: 350px;
 }
 
-#nom_card{
+.nom_card{
   display: flex;
   justify-content: center;
   font-size: 18px;
@@ -63,7 +63,7 @@ nav h1{
   color: rgb(53, 47, 82);
 }
 
-#category_card{
+.category_card{
   display: flex;
   justify-content: center;
   font-size: 12px;
@@ -71,7 +71,7 @@ nav h1{
   color: white;
 }
 
-#color_card{
+.color_card{
   display: flex;
   justify-content: center ;
   font-size: 18px;
@@ -79,21 +79,21 @@ nav h1{
   color:  rgb(53, 47, 82);
 }
 
-#size_card{
+.size_card{
   display: flex;
   justify-content: center;
   font-size: 18px;
   font-weight: 600;
 }
 
-#price_card{
+.price_card{
   display: flex;
   justify-content: flex-end;
   font-size: 25px;
   font-weight: 600;
 }
 
-#edit{
+.edit{
   display: flex;
   font-size: 20px;
   font-weight: 700;
@@ -106,7 +106,7 @@ nav h1{
   margin: 0 0 0 5%;
 }
 
-#delete{
+.delete{
   display: flex;
   font-size: 20px;
   font-weight: 700;
@@ -130,4 +130,19 @@ footer h1{
   font-size: 24px;
   font-weight: 700;
   color: rgb(48, 45, 45);
+}
+
+/* pop up style */
+
+.popup{
+  background-color: cadetblue;
+  width: 20%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+  
 }

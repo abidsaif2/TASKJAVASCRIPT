@@ -1,78 +1,46 @@
-// Récuperation des sous ID et l'implémentation des textes , navbar et footer , card
+//creation des div
 
-var nt = document.querySelector("#nav_title");
-nt.innerHTML='JAVASCRIPT TASK BY ABID SAIF';
+function creation(){
 
-var ft = document.querySelector("#footer_title");
-ft.innerHTML='Copyright ABID SAIF';
+  const productList = document.getElementById('card_articles');
 
-// load product items content from JSON File
+  var card = document.createElement('span');
+    var imgCard = document.createElement('div');
+    var idCard = document.createElement('div');
+    var catCard = document.createElement('div');
+    var colorCard = document.createElement('div');
+    var nomCard = document.createElement('div');
+    var sizeCard = document.createElement('div');
+    var priceCard = document.createElement('div');
+    var editBtn = document.createElement('button');
+    var deleteBtn = document.createElement('button');
 
-const productList = document.querySelector('#card_articles');
+      card.className ='card';
+      imgCard.className ='img_card';
+      idCard.className ='id_card';
+      catCard.className ='category_card';
+      colorCard.className ='color_card';
+      nomCard.className ='nom_card';
+      sizeCard.className ='size_card';
+      priceCard.className ='price_card';
+      editBtn.className ='edit';
+      deleteBtn.className ='delete';
 
- fetch("products.json")
-   .then(response => response.json())
-   .then(data => {
-     let html = '';
-       data.forEach(product => {
-         html += `
-       <span id="card">
-         <div id="id_card">${product.id}</div>
-         <div id="img_card"><img src="${product.image}"></div>
-         <div id="nom_card">${product.name}</div>
-         <div id="category_card">${product.category}</div>
-         <div id="color_card">${product.color}</div>
-         <div id="size_card">${product.size}</div>
-         <div id="price_card">${product.price}$</div>
-      </span>  `;
-       });
-        productList.innerHTML = html;
-   });
+    card.appendChild(idCard);
+    card.appendChild(imgCard);
+    card.appendChild(nomCard);
+    card.appendChild(catCard);
+    card.appendChild(colorCard);
+    card.appendChild(sizeCard);
+    card.appendChild(priceCard);
+    card.appendChild(editBtn);
+    card.appendChild(deleteBtn);
 
-//  création des document objects model
+    productList.appendChild(card);
 
-function create_items() {
-const card = document.createElement('span');
-card.id = 'card';
+}
 
-const id_card = document.createElement('div');
-id_card.id ='id_card';
-document.querySelector('#card').appendChild(id_card);
-
-const img_card = document.createElement('div');
-img_card.id ='img_card';
-document.querySelector('#card').appendChild(img_card);
-
-const nom_card = document.createElement('div');
-nom_card.id ='nom_card';
-document.querySelector('#card').appendChild(nom_card);
-
-const category_card = document.createElement('div');
-category_card.id ='category_card';
-document.querySelector('#card').appendChild(category_card);
-
-const color_card = document.createElement('div');
-color_card.id ='color_card';
-document.querySelector('#card').appendChild(color_card);
-
-const size_card = document.createElement('div');
-size_card.id ='size_card';
-document.querySelector('#card').appendChild(size_card);
-
-const price_card = document.createElement('div');
-price_card.id ='price_card';
-document.querySelector('#card').appendChild(price_card);
-
-const edit_button = document.createElement('button');
-edit_button.id ='edit';
-document.querySelector('#card').appendChild(edit_div);
-
-const delete_button = document.createElement('button');
-delete_button.id ='delete';
-document.querySelector('#card').appendChild(delete_div);
-};
-
-// delete button + supprimer des articles
-function delete_items() {
- 
-};
+function remplissage(i) {
+  
+}
+   
