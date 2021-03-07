@@ -1,3 +1,96 @@
+var articles = [
+  {
+    "id": 1,
+    "category": "jeans",
+    "name": "Ripped jeans",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/11.jpg",
+    "size": "XL",
+    "color": "blue",
+    "price": 20.99
+  },
+  {
+    "id": 2,
+    "category": "jeans",
+    "name": "Boyfriend jeans",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/10.jpg",
+    "size": "S",
+    "color": "blue",
+    "price": 24.99
+  },
+  {
+    "id": 3,
+    "category": "shirts",
+    "name": "Ripped sweatshirt",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/7.jpg",
+    "size": "XL",
+    "color": "white",
+    "price": 29.99
+  },
+  {
+    "id": 4,
+    "category": "jackets",
+    "name": "Denim Jacket",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15.jpg",
+    "size": "M",
+    "color": "grey",
+    "price": 40.99
+  },
+  {
+    "id": 5,
+    "category": "shirts",
+    "name": "Longsleeve",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg",
+    "size": "L",
+    "color": "black",
+    "price": 120.99
+  },
+ {
+    "id": 6,
+    "category": "jeans",
+    "name": "Ripped jeans",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/11.jpg",
+    "size": "XL",
+    "color": "blue",
+    "price": 20.99
+  },
+  {
+    "id": 7,
+    "category": "jeans",
+    "name": "Boyfriend jeans",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/10.jpg",
+    "size": "S",
+    "color": "blue",
+    "price": 24.99
+  },
+  {
+    "id": 8,
+    "category": "shirts",
+    "name": "Ripped sweatshirt",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/7.jpg",
+    "size": "XL",
+    "color": "white",
+    "price": 29.99
+  },
+  {
+    "id": 9,
+    "category": "jackets",
+    "name": "Denim Jacket",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15.jpg",
+    "size": "M",
+    "color": "grey",
+    "price": 40.99
+  },
+  {
+    "id": 10,
+    "category": "shirts",
+    "name": "Longsleeve",
+    "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg",
+    "size": "L",
+    "color": "black",
+    "price": 120.99
+  }
+];
+
 //creation des div
 
 function creation(){
@@ -40,7 +133,32 @@ function creation(){
 
 }
 
-function remplissage(i) {
-  
+// remplissage des items
+
+function remplissage(i,a,b,c,d,e,f,g) {
+  var idCard = document.getElementsByClassName('id_card')[i];
+  var imgCard = document.getElementsByClassName('img_card')[i];
+  var nomCard = document.getElementsByClassName('nom_card')[i];
+  var catCard = document.getElementsByClassName('category_card')[i];
+  var colorCard = document.getElementsByClassName('color_card')[i];
+  var sizeCard = document.getElementsByClassName('size_card')[i];
+  var priceCard = document.getElementsByClassName('price_card')[i];
+
+  var idCardnode = document.createTextNode(a);
+  var imgCardnode = document.createTextNode(b);
+  var nomCardnode = document.createTextNode(c);
+  var catCardnode = document.createTextNode(d);
+  var colorCardnode = document.createTextNode(e);
+  var sizeCardnode = document.createTextNode(f);
+  var priceCardnode = document.createTextNode(g);
+
+  idCard.appendChild(idCardnode);
+  imgCard.appendChild(imgCardnode);
+  nomCard.appendChild(nomCardnode);
+  catCard.appendChild(catCardnode);
+  colorCard.appendChild(colorCardnode);
+  sizeCard.appendChild(sizeCardnode);
+  priceCard.appendChild(priceCardnode);
+
 }
    
