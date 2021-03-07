@@ -145,7 +145,10 @@ function remplissage(i,a,b,c,d,e,f,g) {
   var priceCard = document.getElementsByClassName('price_card')[i];
 
   var idCardnode = document.createTextNode(a);
-  var imgCardnode = document.createTextNode(b);
+
+  var imgPlace = document.createElement('img');
+    imgPlace.setAttribute("src",b);
+
   var nomCardnode = document.createTextNode(c);
   var catCardnode = document.createTextNode(d);
   var colorCardnode = document.createTextNode(e);
@@ -153,12 +156,17 @@ function remplissage(i,a,b,c,d,e,f,g) {
   var priceCardnode = document.createTextNode(g);
 
   idCard.appendChild(idCardnode);
-  imgCard.appendChild(imgCardnode);
+  imgCard.appendChild(imgPlace);
   nomCard.appendChild(nomCardnode);
   catCard.appendChild(catCardnode);
   colorCard.appendChild(colorCardnode);
   sizeCard.appendChild(sizeCardnode);
   priceCard.appendChild(priceCardnode);
-
 }
    
+// les boucles de remplissage
+
+for (i=0 ; i<articles.length ; i++){
+  creation();
+  remplissage(i,articles[i].id,articles[i].image,articles[i].name,articles[i].category,articles[i].color,articles[i].size,articles[i].price);
+}
