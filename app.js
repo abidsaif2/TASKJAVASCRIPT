@@ -166,7 +166,7 @@ function remplissage(i,a,b,c,d,e,f,g) {
   var idCardnode = document.createTextNode(a);
 
   var imgPlace = document.createElement('img');
-    imgPlace.setAttribute('src',b);
+      imgPlace.setAttribute('src',b);
 
   var nomCardnode = document.createTextNode(c);
   var catCardnode = document.createTextNode(d);
@@ -219,9 +219,8 @@ function addItems() {
     deleteItems(k);
 }
 
-// popup function
 
-function toggle(){
-   var popupBtn = document.getElementById('popup')
-   popupBtn.classList.toggle('active')
-}
+
+
+
+
