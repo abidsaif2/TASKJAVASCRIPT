@@ -1,3 +1,5 @@
+// articles
+
 var articles = [
   {
     "id": 1,
@@ -108,6 +110,12 @@ function creation(){
     var editBtn = document.createElement('button');
     var deleteBtn = document.createElement('button');
 
+      var deleteBtnnode = document.createTextNode('delete');
+      var editBtnnode = document.createTextNode('edit');
+
+        editBtn.appendChild(editBtnnode);
+        deleteBtn.appendChild(deleteBtnnode);
+
       card.className ='card';
       imgCard.className ='img_card';
       idCard.className ='id_card';
@@ -147,7 +155,7 @@ function remplissage(i,a,b,c,d,e,f,g) {
   var idCardnode = document.createTextNode(a);
 
   var imgPlace = document.createElement('img');
-    imgPlace.setAttribute("src",b);
+    imgPlace.setAttribute('src',b);
 
   var nomCardnode = document.createTextNode(c);
   var catCardnode = document.createTextNode(d);
@@ -169,4 +177,15 @@ function remplissage(i,a,b,c,d,e,f,g) {
 for (i=0 ; i<articles.length ; i++){
   creation();
   remplissage(i,articles[i].id,articles[i].image,articles[i].name,articles[i].category,articles[i].color,articles[i].size,articles[i].price);
+  deleteItemBtn(i)
+}
+
+// function delete
+
+function deleteItemBtn(i) {
+  var deleteItem = document.getElementsByClassName("delete")[i];
+  deleteItem.addEventListener('click', function (event) {
+      var item = event.target.parentNode;
+      item.remove();
+  });
 }
