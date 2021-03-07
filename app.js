@@ -93,6 +93,17 @@ var articles = [
   }
 ];
 
+// nav bar et footer
+
+var nav = document.getElementById("nav");
+var footer = document.getElementById("footer");
+
+var nt = document.querySelector("#nav_title");
+nt.innerHTML='JAVASCRIPT TASK BY ABID SAIF';
+
+var ft = document.querySelector("#footer_title");
+ft.innerHTML='Copyright ABID SAIF';
+
 //creation des div
 
 function creation(){
@@ -206,4 +217,11 @@ function addItems() {
     creation();
     remplissage(i, itemId, itemImg , itemName , itemCategory , itemColor, itemSize, itemPrice);
     deleteItems(k);
+}
+
+// popup function
+
+function toggle(){
+   var popupBtn = document.getElementById('popup')
+   popupBtn.classList.toggle('active')
 }
