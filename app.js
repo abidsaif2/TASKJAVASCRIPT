@@ -177,15 +177,33 @@ function remplissage(i,a,b,c,d,e,f,g) {
 for (i=0 ; i<articles.length ; i++){
   creation();
   remplissage(i,articles[i].id,articles[i].image,articles[i].name,articles[i].category,articles[i].color,articles[i].size,articles[i].price);
-  deleteItemBtn(i)
+  deleteItems(i)
 }
 
 // function delete
 
-function deleteItemBtn(i) {
+function deleteItems(i) {
   var deleteItem = document.getElementsByClassName("delete")[i];
   deleteItem.addEventListener('click', function (event) {
       var item = event.target.parentNode;
       item.remove();
   });
+}
+
+// function ajouter des items
+
+function addItems() {
+    var itemId = document.forms["myForm"]["fid"].value;
+    var itemCategory = document.forms["myForm"]["fcategory"].value;
+    var itemName = document.forms["myForm"]["fname"].value;
+    var itemImg = document.forms["myForm"]["fimg"].value;
+    var itemColor = document.forms["myForm"]["fcolor"].value;
+    var itemSize = document.forms["myForm"]["fsize"].value;
+    var itemPrice = document.forms["myForm"]["fprice"].value;
+
+      var k = articles.length++;
+
+    creation();
+    remplissage(i, itemId, itemImg , itemName , itemCategory , itemColor, itemSize, itemPrice);
+    deleteItems(k);
 }
